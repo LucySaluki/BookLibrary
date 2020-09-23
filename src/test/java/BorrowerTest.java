@@ -30,5 +30,7 @@ public class BorrowerTest {
     @Test
     public void canBorrowBookFromLibrary(){
         borrower.borrowBook(library);
+        assertEquals(0,library.bookCount());
+        assertEquals(1,borrower.booksBorrowedCount());
     }
 }
